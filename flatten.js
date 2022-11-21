@@ -17,3 +17,22 @@ const eqArrays = function(array1, array2) {
 const assertArraysEqual = function(array1, array2) {
   (eqArrays(array1, array2)) ? console.log(`✅✅✅💃Assertion Passed: ${array1} === ${array2}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${array1} !== ${array2}`);
 };
+
+const flatten = function(sourceArray){
+let newArray = [];
+
+  for (let item of sourceArray) {
+
+    if (Array.isArray(item)){
+
+      for (let element of item){
+        newArray.push(element);
+      }
+      continue;
+    }
+      newArray.push(item);
+  }
+
+  return newArray;
+};
+
