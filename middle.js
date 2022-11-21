@@ -34,11 +34,15 @@ const middle = function(sourceArray){
   let middleArray = [];
 
   switch (sourceArray.length % 2){
+
     case 0:
-      middleArray = pushToArray(sourceArray, middleArray, [(sourceArray.length / 2) - 1, sourceArray.length / 2]);
-      break;
+      return pushToArray(sourceArray, middleArray, [(sourceArray.length / 2) - 1, sourceArray.length / 2]);
+      
     case 1:
-      middleArray = pushToArray(sourceArray, middleArray, [Math.ceil(sourceArray.length / 2)]);
+      return pushToArray(sourceArray, middleArray, [Math.ceil(sourceArray.length / 2)]);
+
+    default:
+      break;
   }
 
   return middleArray;
