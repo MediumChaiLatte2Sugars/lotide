@@ -15,10 +15,6 @@ const eqArrays = function(array1, array2) {
 };
 
 const pushToArray = function(ogArray, midArray, indices){
-  if (indices.length === 1){
-    midArray.push(ogArray[indices[0]]);
-  }
-
   for (let number of indices){
     midArray.push(ogArray[number]);
   }
@@ -39,7 +35,7 @@ const middle = function(sourceArray){
       return pushToArray(sourceArray, middleArray, [(sourceArray.length / 2) - 1, sourceArray.length / 2]);
       
     case 1:
-      return pushToArray(sourceArray, middleArray, [Math.ceil(sourceArray.length / 2)]);
+      return pushToArray(sourceArray, middleArray, [Math.floor(sourceArray.length / 2)]);
 
     default:
       break;
@@ -47,3 +43,15 @@ const middle = function(sourceArray){
 
   return middleArray;
 };
+
+let testArray1 = [1, 2, 3, 4, 5];
+assertArraysEqual(middle(testArray1), [3]);
+
+testArray1 = [1, 2, 4, 5];
+assertArraysEqual(middle(testArray1), [2, 4]);
+
+testArray1 = [1];
+assertArraysEqual(middle(testArray1), [1]);
+
+testArray1 = [];
+assertArraysEqual(middle(testArray1), []);
