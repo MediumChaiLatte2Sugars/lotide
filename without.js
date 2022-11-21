@@ -18,18 +18,24 @@ const assertArraysEqual = function(array1, array2) {
   (eqArrays(array1, array2)) ? console.log(`✅✅✅💃Assertion Passed: ${array1} === ${array2}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${array1} !== ${array2}`);
 };
 
-const without = function(sourceArray, itemsToRemove){
+const without = function(sourceArray, itemsToRemove) {
   let newArray = [];
 
-  if (!itemsToRemove.length){
+  if (!itemsToRemove.length) {
     return sourceArray;
   }
 
-  for (let item of sourceArray){
-    if (!itemsToRemove.includes(item)){
+  for (let item of sourceArray) {
+    if (!itemsToRemove.includes(item)) {
       newArray.push(item);
     }
   }
 
   return newArray;
-}
+};
+
+let testArray1 = [2, 4, 6];
+assertArraysEqual(without(testArray1, [4]), testArray1);
+
+testArray1 = [2, 4, 6, 7, 8];
+assertArraysEqual(without(testArray1, [1, 1]), testArray1);
