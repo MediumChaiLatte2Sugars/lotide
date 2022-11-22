@@ -9,7 +9,11 @@ const countOnly = function(allItems, itemsToCount){
     console.log(item);
 
     if (results[item]){
-      results[item]++;
+
+      if (itemsToCount[item]){
+        results[item]++;
+      }
+    
     } else {
       results[item] = 1;
     }
