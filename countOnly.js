@@ -7,6 +7,7 @@ const countOnly = function(allItems, itemsToCount){
 
   for (const item of allItems){
     console.log(item);
+    typeof results[item] === 'number' ? results[item]++ : results[item] = 1; 
   }
 
   return results;
