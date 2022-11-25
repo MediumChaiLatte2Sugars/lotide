@@ -24,4 +24,7 @@ const letterPositions = function(sentence){
 }
 
 testString = "hello";
-
+assertArraysEqual(letterPositions(testString).h, [0]);
+assertArraysEqual(letterPositions(testString).e, [1]);
+assertArraysEqual(letterPositions(testString).l, [2, 3]);
+assertArraysEqual(letterPositions(testString).o, [4]);
