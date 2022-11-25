@@ -3,9 +3,14 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKeyByValue = function(object, value){
-  let firstFoundKey;
 
-  return firstFoundKey;
+  for (let key in object){
+    
+    if (object[key] === value){
+      return key;
+    }
+
+  }
 };
 
 const bestTVShowsByGenre = { 
@@ -16,3 +21,30 @@ const bestTVShowsByGenre = {
 
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+let vegetables = { 
+  tuber: "Cassava",
+  allium: "Onion",
+  leafy:  "Lettuce"
+};
+
+assertEqual(findKeyByValue(vegetables, "Cassava"), "tuber");
+assertEqual(findKeyByValue(vegetables, "Tomato"), undefined);
+
+vegetables = { 
+  tuber: "Cassava",
+  tuber2: "Cassava",
+  tuber3:  "Cassava"
+};
+
+assertEqual(findKeyByValue(vegetables, "Cassava"), "tuber");
+
+vegetables = { 
+  nottuber: "Eggplant",
+  something: "Nothing",
+  tuber: "Cassava",
+  tuber2: "Cassava",
+  tuber3:  "Cassava"
+};
+
+assertEqual(findKeyByValue(vegetables, "Cassava"), "tuber");
