@@ -24,3 +24,18 @@ assertEqual(testCounter.J, 1);
 assertEqual(testCounter.H, 1);
 assertEqual(testCounter.G, 1);
 assertEqual(testCounter.L, 1);
+
+testString = "JHLGL";
+testCounter = countLetters(testString);
+assertEqual(testCounter.J, 1);
+assertEqual(testCounter.H, 1);
+assertEqual(testCounter.G, 1);
+assertEqual(testCounter.L, 2);
+
+testString = "JHAAAALGL";
+testCounter = countLetters(testString);
+assertEqual(testCounter.J, 1);
+assertEqual(testCounter.H, 1);
+assertEqual(testCounter.G, 1);
+assertEqual(testCounter.L, 2);
+assertEqual(testCounter.A, 4);
