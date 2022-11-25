@@ -7,6 +7,10 @@ const countLetters = function(sourceString) {
 
   for (let letter of sourceString) {
 
+    if (letter === " "){
+      continue;
+    }
+
     if (letterCount[letter]) {
       letterCount[letter]++;
     } else {
