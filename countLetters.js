@@ -2,13 +2,23 @@ const assertEqual = function(actual, expected) {
   (actual === expected) ? console.log(`✅✅✅💃Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const countLetters = function(sourceString){
+const countLetters = function(sourceString) {
   letterCount = {};
+
+  for (let letter of sourceString) {
+
+    if (letterCount[letter]) {
+      letterCount[letter]++;
+    } else {
+      letterCount[letter] = 1;
+    }
+
+  }
 
   return letterCount;
 };
 
-let testString = "JHGL"
+let testString = "JHGL";
 let testCounter = countLetters(testString);
 assertEqual(testCounter.J, 1);
 assertEqual(testCounter.H, 1);
