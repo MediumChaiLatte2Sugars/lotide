@@ -30,7 +30,12 @@ const eqObjects = function(object1, object2) {
       return false;
     }
 
-    // Check to see if the values are the same
+    // Check to see if the values are the same (Arrays)
+    if (object1[Object.keys(object1)[index]] instanceof Array && object2[Object.keys(object2)[index]] instanceof Array) {
+      return eqArrays(object1[Object.keys(object1)[index]], object2[Object.keys(object2)[index]])
+    }
+
+    // Check to see if the values are the same (primitives)
     if (object1[Object.keys(object1)[index]] !== object2[Object.keys(object2)[index]]) {
       return false;
     }
