@@ -18,8 +18,27 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 const letterPositions = function(sentence){
+  
   const results = {};
-  // logic
+  
+  for (let index = 0; index < sentence.length; index++){
+    
+    if (sentence[index] === " "){
+      continue;
+    }
+
+    if (results[sentence[index]]){
+
+      results[sentence[index]].push(index);
+
+    } else {
+
+      results[sentence[index]] = [index];
+
+    }
+
+  }
+
   return results;
 }
 
