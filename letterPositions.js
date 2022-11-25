@@ -47,3 +47,9 @@ assertArraysEqual(letterPositions(testString).h, [0]);
 assertArraysEqual(letterPositions(testString).e, [1]);
 assertArraysEqual(letterPositions(testString).l, [2, 3]);
 assertArraysEqual(letterPositions(testString).o, [4]);
+
+testString = "ooga booga";
+assertArraysEqual(letterPositions(testString).o, [0, 1, 6, 7]);
+assertArraysEqual(letterPositions(testString).g, [2, 8]);
+assertArraysEqual(letterPositions(testString).a, [3, 9]);
+assertArraysEqual(letterPositions(testString).b, [5]);
