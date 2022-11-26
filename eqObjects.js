@@ -19,24 +19,27 @@ const eqArrays = function(array1, array2) {
 
 const eqObjects = function(object1, object2) {
 
+  // Checks if objects have the same number of keys
   if (Object.keys(object1).length !== Object.keys(object2).length || Object.values(object1).length !== Object.values(object2).length) {
     return false;
   }
 
   for (let index = 0; index < Object.keys(object1).length; index++) {
 
+    let object1KeyAtIndex = Object.keys(object1)[index], object2KeyAtIndex = Object.keys(object2)[index];
+
     // Check to see if the keys are the same
-    if (Object.keys(object1)[index] !== Object.keys(object2)[index]) {
+    if (object1KeyAtIndex !== object2KeyAtIndex) {
       return false;
     }
 
     // Check to see if the values are the same (Arrays)
-    if (object1[Object.keys(object1)[index]] instanceof Array && object2[Object.keys(object2)[index]] instanceof Array) {
-      return eqArrays(object1[Object.keys(object1)[index]], object2[Object.keys(object2)[index]])
+    if (Array.isArray(object1[object1KeyAtIndex]) && Array.isArray(object2[object2KeyAtIndex])) {
+      return eqArrays(object1[object1KeyAtIndex], object2[object2KeyAtIndex])
     }
 
     // Check to see if the values are the same (primitives)
-    if (object1[Object.keys(object1)[index]] !== object2[Object.keys(object2)[index]]) {
+    if (object1[object1KeyAtIndex] !== object2[object2KeyAtIndex]) {
       return false;
     }
 
@@ -65,7 +68,6 @@ assertEqual(abc.c, ab.c);
 assertEqual(Object.keys(abc).length, Object.keys(ab).length);
 
 // non prim's test
-console.log("NON PRIM TESTS");
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 eqObjects(cd, dc); // => true
