@@ -29,6 +29,9 @@ const eqObjects = function(object1, object2) {
   return true;
 }
 
-const assertObjectsEqual = function(actual, expected){
-  (eqArrays(actual, expected)) ?  console.log(`✅✅✅💃Assertion Passed: ${array1} === ${array2}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${array1} !== ${array2}`);
+const assertObjectsEqual = function(object1, object2){
+  (eqArrays(object1, object2)) ?  console.log(`✅✅✅💃Assertion Passed: ${object1} === ${object2}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${object1} !== ${object2}`);
 }
+
+let testObject = {1: "one", 2: "two"}, testObject2 = {1: "one", 2: "three"};
+assertObjectsEqual(testObject, testObject2);
