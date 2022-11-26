@@ -56,3 +56,6 @@ assertObjectsEqual(testObject, testObject2);
 
 testObject = { 1: "one", 2: "two" }, testObject2 = { 1: "one", 2: "two" };
 assertObjectsEqual(testObject, testObject2);
+
+testObject = { 1: "", 2: "", 3: ["three"] }, testObject2 = { 1: "one", 2: "two" };
+assertObjectsEqual(testObject, testObject2);
