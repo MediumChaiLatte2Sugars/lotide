@@ -20,9 +20,9 @@ const assertArraysEqual = function(array1, array2) {
 const takeUntil = function(array, callback) {
   let resultArray = [];
 
-  for (let item of array){
-    
-    if (callback(item)){
+  for (let item of array) {
+
+    if (callback(item)) {
       return resultArray;
     }
 
@@ -46,6 +46,6 @@ let testArray = [1, 2, 3, 5, 6];
 let resultArray = takeUntil(testArray, number => number > 4);
 assertArraysEqual(resultArray, [1, 2, 3]);
 
-testArray = [1, 2, , 3, 5, , 6, 0];
+testArray = [1, 2, 3, 5, 6, 0];
 resultArray = takeUntil(testArray, number => number === 4);
-assertArraysEqual(resultArray, [1, 2, , 3, 5, , 6, 0]);
+assertArraysEqual(resultArray, [1, 2, 3, 5, 6, 0]);
