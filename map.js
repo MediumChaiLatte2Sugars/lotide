@@ -17,10 +17,10 @@ const assertArraysEqual = function(array1, array2) {
   (eqArrays(array1, array2)) ? console.log(`✅✅✅💃Assertion Passed: ${array1} === ${array2}`) : console.log(`🛑🛑🛑🕵️‍♀️Assertion Failed: ${array1} !== ${array2}`);
 };
 
-const map = function(array, callback){
+const map = function(array, callback) {
   const results = [];
 
-  for (let item of array){
+  for (let item of array) {
     results.push(callback(item));
   }
 
