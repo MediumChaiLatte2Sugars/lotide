@@ -31,3 +31,15 @@ const words = ["ground", "control", "to", "major", "tom"];
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
+
+let testArray = [1, 2, 3, 4];
+let changedArray = map(testArray, number => number ** 2);
+assertArraysEqual(changedArray, [1, 4, 9, 16]);
+
+testArray = [1, 2, 3, 4];
+changedArray = map(testArray, number => number.toString());
+assertArraysEqual(changedArray, ["1", "2", "3", "4"]);
+
+testArray = ["a", "b", "c"];
+changedArray = map(testArray, letter => letter.toUpperCase());
+assertArraysEqual(changedArray, ["A", "B", "C"]);
