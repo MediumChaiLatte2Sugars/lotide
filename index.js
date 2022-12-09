@@ -13,16 +13,16 @@ const countOnly = require('./countOnly');
 const countLetters = require('./countLetters');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle,
-  without: without,
-  takeUntil: takeUntil,
-  letterPositions: letterPositions,
-  flatten: flatten,
-  findKeyByValue: findKeyByValue,
-  findKey: findKey,
-  eqObjects: eqObjects,
-  countOnly: countOnly,
-  countLetters: countLetters,
+  head,
+  tail,
+  middle,
+  without,
+  takeUntil,
+  letterPositions,
+  flatten,
+  findKeyByValue,
+  findKey,
+  eqObjects,
+  countOnly,
+  countLetters,
 };
