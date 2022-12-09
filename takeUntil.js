@@ -49,3 +49,5 @@ assertArraysEqual(resultArray, [1, 2, 3]);
 testArray = [1, 2, 3, 5, 6, 0];
 resultArray = takeUntil(testArray, number => number === 4);
 assertArraysEqual(resultArray, [1, 2, 3, 5, 6, 0]);
+
+module.exports = takeUntil;

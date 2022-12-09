@@ -32,3 +32,5 @@ testObject = {
 };
 
 assertEqual(findKey(testObject, x => Array.isArray(x) && x.length > 1), "dish7");
+
+module.exports = findKey;

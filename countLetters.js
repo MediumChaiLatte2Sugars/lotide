@@ -43,3 +43,5 @@ assertEqual(testCounter.H, 1);
 assertEqual(testCounter.G, 1);
 assertEqual(testCounter.L, 2);
 assertEqual(testCounter.A, 4);
+
+module.exports = countLetters;

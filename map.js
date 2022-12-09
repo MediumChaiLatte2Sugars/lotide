@@ -43,3 +43,5 @@ assertArraysEqual(changedArray, ["1", "2", "3", "4"]);
 testArray = ["a", "b", "c"];
 changedArray = map(testArray, letter => letter.toUpperCase());
 assertArraysEqual(changedArray, ["A", "B", "C"]);
+
+module.exports = map;

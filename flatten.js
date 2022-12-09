@@ -38,3 +38,5 @@ const flatten = function(sourceArray) {
 
 let testArray1 = [1, [2, 4, 5], 4, [3, 4]];
 assertArraysEqual(flatten(testArray1), [1, 2, 4, 5, 4, 3, 4]);
+
+module.exports = flatten;

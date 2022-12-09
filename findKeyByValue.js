@@ -48,3 +48,5 @@ vegetables = {
 };
 
 assertEqual(findKeyByValue(vegetables, "Cassava"), "tuber");
+
+module.exports = findKeyByValue;
