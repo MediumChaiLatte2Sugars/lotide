@@ -12,11 +12,11 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install @MediumChaiLatte2Sugars/lotide`
+`npm install @mediumchailatte2sugars/lotide`
 
 **Require it:**
 
-`const _ = require('@MediumChaiLatte2Sugars/lotide');`
+`const _ = require('@mediumchailatte2sugars/lotide');`
 
 **Call it:**
 
